@@ -266,24 +266,27 @@
 
 /* Conclusions Section */
 .conclusion-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.conclusion-text h2 {
+.conclusion-content h2 {
     font-size: clamp(1.875rem, 4vw, 2.5rem);
     font-weight: var(--font-weight-semibold);
     margin-bottom: 1.5rem;
     color: var(--foreground);
 }
 
-.conclusion-text p {
+.conclusion-content p {
     font-size: 1.125rem;
     color: var(--muted-foreground);
     line-height: 1.7;
     margin-bottom: 1.5rem;
+    text-align: left;
 }
 
 /* Key Learnings */
