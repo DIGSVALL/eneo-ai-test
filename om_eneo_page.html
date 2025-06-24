@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Eneo - Eneo.ai</title>
+    <meta name="description" content="Läs mer om Eneo.ai - den öppna AI-plattformen för det offentliga Sverige. Vår vision, mission och hur vi arbetar för demokratisk AI-utveckling.">
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages/about.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="public/images/logo.png" alt="Eneo.ai">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav">
+                    <a href="om-eneo.html" class="active">Om Eneo</a>
+                    <a href="samarbetsforum.html">Samarbetsforum</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="mobile-menu">
+                    <button class="mobile-menu-button" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" id="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobile-nav">
+                <div class="container">
+                    <nav>
+                        <a href="index.html" onclick="closeMobileMenu()">Hem</a>
+                        <a href="om-eneo.html" onclick="closeMobileMenu()" class="active">Om Eneo</a>
+                        <a href="samarbetsforum.html" onclick="closeMobileMenu()">Samarbetsforum</a>
+                        <a href="kontakt.html" onclick="closeMobileMenu()">Kontakt</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1>Om Eneo</h1>
+                    <p>Demokratisk AI-utveckling för det offentliga Sverige</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section id="vision" class="section">
+            <div class="container">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h2>Vår vision</h2>
+                        <p>Vi tror på en framtid där generativ AI inte är förbehållen stora teknologiföretag eller välbärgade organisationer. Istället ska det vara en teknologi som alla offentliga organisationer kan använda, förstå och påverka.</p>
+                        
+                        <p>Eneo representerar en ny väg framåt - en där transparens, demokratisk kontroll och kollektiv utveckling står i centrum för AI-innovation.</p>
+                        
+                        <div class="highlight-box">
+                            <h3>Våra kärnvärden</h3>
+                            <ul>
+                                <li><strong>Transparens:</strong> All kod är öppen och granskningsbar</li>
+                                <li><strong>Demokrati:</strong> Användarna styr utvecklingen tillsammans</li>
+                                <li><strong>Jämlikhet:</strong> Samma möjligheter för stora som små organisationer</li>
+                                <li><strong>Samarbete:</strong> Vi bygger framtiden tillsammans</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-image">
+                        <img src="public/images/vision-illustration.png" alt="Illustration av demokratisk AI-utveckling" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Initiativtagare Section -->
+        <section id="initiativtagare" class="section section-secondary">
+            <div class="container">
+                <div class="section-center">
+                    <h2>Initiativtagare</h2>
+                    <p>Eneo är ett initiativ som startades av offentliga organisationer, för offentliga organisationer</p>
+                </div>
+                
+                <div class="initiator-grid">
+                    <div class="initiator-card">
+                        <div class="initiator-logo">
+                            <img src="public/images/sundsvall-logo.png" alt="Sundsvalls kommun logotyp">
+                        </div>
+                        <h3>Sundsvalls kommun</h3>
+                        <p>Initiativtagare och huvudutvecklare av Eneo-plattformen. Sundsvall har lett arbetet med att skapa en öppen och demokratisk AI-lösning för offentlig sektor.</p>
+                        <a href="#" class="learn-more">Läs mer om Sundsvalls AI-arbete →</a>
+                    </div>
+                    
+                    <div class="initiator-card">
+                        <div class="initiator-logo">
+                            <img src="public/images/ange-logo.png" alt="Ånge kommun logotyp">
+                        </div>
+                        <h3>Ånge kommun</h3>
+                        <p>Partner i utvecklingen av Eneo och förespråkare för små kommuners rätt till avancerad AI-teknik. Ånge visar att innovation inte har med storlek att göra.</p>
+                        <a href="#" class="learn-more">Läs mer om Ånges digitalisering →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Source Section -->
+        <section id="oppen-kallkod" class="section">
+            <div class="container">
+                <div class="content-grid reverse">
+                    <div class="content-image">
+                        <div class="code-preview">
+                            <div class="code-header">
+                                <span class="code-title">eneo-core/src/main.py</span>
+                                <span class="code-status">✓ Open Source</span>
+                            </div>
+                            <pre><code class="language-python"># Eneo AI Platform - Open Source
+class EneoAI:
+    def __init__(self, config):
+        self.transparent = True
+        self.democratic = True
+        self.license = "AGPL-3.0"
+    
+    def serve_public_sector(self):
+        return "AI för alla"</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="content-text">
+                        <h2>Öppen källkod som grund</h2>
+                        <p>Eneo bygger på principen att offentliga organisationer ska ha full kontroll över de verktyg de använder. Därför är all kod öppet tillgänglig under AGPL-3.0 licensen.</p>
+                        
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon"></div>
+                                <p><strong>Fullständig transparens:</strong> Ingen dold funktionalitet eller hemliga algoritmer</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"></div>
+                                <p><strong>Säkerhetsgranskning:</strong> Alla kan granska koden för säkerhetsbrister</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"></div>
+                                <p><strong>Lokala anpassningar:</strong> Möjlighet att modifiera enligt lokala behov</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"></div>
+                                <p><strong>Ingen inlåsning:</strong> Full frihet att använda och utveckla vidare</p>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-buttons">
+                            <a href="#" class="btn btn-primary">Utforska GitHub</a>
+                            <a href="#" class="btn btn-outline">Läs dokumentation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="section section-secondary">
+            <div class="container">
+                <div class="section-center">
+                    <h2>Utvecklingsresa</h2>
+                    <p>Från idé till verklighet - hur Eneo blev till</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Q4 2023</h3>
+                            <h4>Första idén</h4>
+                            <p>Sundsvalls kommun identifierar behovet av en öppen AI-plattform för offentlig sektor</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Q1 2024</h3>
+                            <h4>Projektstart</h4>
+                            <p>Utvecklingen påbörjas med fokus på öppen källkod och demokratiska principer</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Q3 2024</h3>
+                            <h4>Första partnerskapet</h4>
+                            <p>Ånge kommun ansluter som utvecklingspartner och medgrundare</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Q4 2024</h3>
+                            <h4>Beta-lansering</h4>
+                            <p>Första versionen av Eneo släpps för testning av utvalda organisationer</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item active">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>2025</h3>
+                            <h4>Offentlig lansering</h4>
+                            <p>Eneo blir tillgängligt för alla offentliga organisationer i Sverige</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="section-center">
+                    <h2>Bli en del av Eneo-gemenskapen</h2>
+                    <p>Hjälp oss att forma framtiden för demokratisk AI i offentlig sektor</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="samarbetsforum.html" class="btn btn-primary">Gå med i samarbetsforumet</a>
+                        <a href="kontakt.html" class="btn btn-outline">Kontakta oss</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Om Eneo</h3>
+                    <ul>
+                        <li><a href="om-eneo.html#vision">Vår vision</a></li>
+                        <li><a href="om-eneo.html#initiativtagare">Initiativtagare</a></li>
+                        <li><a href="om-eneo.html#oppen-kallkod">Öppen källkod</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resurser</h3>
+                    <ul>
+                        <li><a href="#github">GitHub</a></li>
+                        <li><a href="#dokumentation">Dokumentation</a></li>
+                        <li><a href="#api">API-referens</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Samarbete</h3>
+                    <ul>
+                        <li><a href="samarbetsforum.html">Samarbetsforum</a></li>
+                        <li><a href="#bidra">Bidra</a></li>
+                        <li><a href="#community">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li><a href="mailto:digitalisering@sundsvall.se">digitalisering@sundsvall.se</a></li>
+                        <li><a href="kontakt.html">Sundsvalls kommun</a></li>
+                        <li><a href="kontakt.html">851 85 Sundsvall</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Ett initiativ från Sundsvalls kommun och Ånge kommun för hela offentliga Sverige</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
