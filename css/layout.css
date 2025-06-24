@@ -27,8 +27,7 @@
     display: flex;
     align-items: center;
     min-width: 120px;
-    padding-left: 2rem;
-    padding-top: 1rem;
+    padding-left: 1.5rem;
 }
 
 .logo a {
@@ -46,12 +45,14 @@
 }
 
 .logo img {
-    height: 4rem;
+    height: 2.5rem;
     width: auto;
     transition: opacity var(--transition-smooth);
     object-fit: contain;
     position: relative;
     z-index: 51;
+    margin-top: 1rem;
+    transform: translateY(0.5rem);
 }
 
 /* Hide broken images */
@@ -77,25 +78,27 @@
     text-decoration: none;
     font-weight: var(--font-weight-medium);
     font-size: 1rem;
-    padding: 0.75rem 1rem;
-    border-radius: 0.375rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
     transition: all var(--transition-smooth);
     display: flex;
     align-items: center;
     height: fit-content;
+    margin-top: 2.5rem;
 }
 
 .nav a:hover {
     color: var(--primary);
-    background: rgba(0, 82, 147, 0.05);
+    background: rgba(0, 82, 147, 0.08);
+    transform: translateY(-1px);
 }
 
 .nav a::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 1rem;
-    right: 1rem;
+    bottom: 1rem;
+    left: 1.25rem;
+    right: 1.25rem;
     height: 2px;
     background: var(--primary);
     transform: scaleX(0);
@@ -283,6 +286,7 @@
 
     .logo img {
         height: 3rem;
+        transform: translateY(-0.7rem);
     }
 }
 

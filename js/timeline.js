@@ -63,7 +63,7 @@ function initializeScrollAnimations() {
     }, observerOptions);
     
     // Observe elements for scroll animations
-    const elementsToAnimate = document.querySelectorAll('.learning-item, .stat-item');
+    const elementsToAnimate = document.querySelectorAll('.learning-item');
     elementsToAnimate.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px) scale(0.95)';
@@ -131,6 +131,9 @@ function initializeTimelineInteractions() {
 function highlightTimelineSection(index) {
     const timelineTrack = document.querySelector('.timeline-track');
     if (!timelineTrack) return;
+    
+    // Skip highlighting on mobile to avoid visual conflicts
+    if (window.innerWidth <= 767) return;
     
     // Create a temporary highlight element
     const highlight = document.createElement('div');
@@ -210,6 +213,9 @@ function initializeProgressTracking() {
     
     if (!timelineContainer || !timelineTrack) return;
     
+    // Disable progress indicator on mobile to avoid positioning conflicts
+    if (window.innerWidth <= 767) return;
+    
     // Create progress indicator
     const progressIndicator = document.createElement('div');
     progressIndicator.className = 'timeline-progress';
@@ -218,12 +224,12 @@ function initializeProgressTracking() {
         left: 50%;
         top: 0;
         width: 4px;
-        background: linear-gradient(to bottom, var(--success), var(--primary-light));
+        background: linear-gradient(to bottom, var(--primary), var(--primary-light));
         transform: translateX(-50%);
         border-radius: 2px;
         transition: height 0.3s ease;
         height: 0%;
-        z-index: 5;
+        z-index: 2;
     `;
     
     timelineContainer.appendChild(progressIndicator);
