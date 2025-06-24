@@ -24,13 +24,14 @@
 .hero::after {
     content: '';
     position: absolute;
-    bottom: 5rem;
-    right: 5rem;
-    width: 20rem;
-    height: 20rem;
-    background: rgba(0, 82, 147, 0.1);
+    bottom: 8rem;
+    right: 8rem;
+    width: 16rem;
+    height: 16rem;
+    background: rgba(0, 82, 147, 0.03);
     border-radius: 50%;
-    filter: blur(3rem);
+    filter: blur(4rem);
+    z-index: -1;
 }
 
 .hero-content {
@@ -101,7 +102,7 @@
     color: var(--foreground);
     margin-bottom: 2rem;
     font-weight: var(--font-weight-light);
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
 .manifest-quote cite {
@@ -133,6 +134,7 @@
 .platform-text p {
     font-size: 1.25rem;
     color: var(--muted-foreground);
+    line-height: 1.7;
 }
 
 .platform-cta {
