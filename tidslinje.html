@@ -1,1 +1,310 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-utveckling - Tidslinje för Eneo.ai produktutveckling</title>
+    <meta name="description" content="Följ utvecklingen av Eneo.ai AI-produkter genom vår interaktiva tidslinje. Se milstolpar, innovationer och framtidsplaner för demokratisk AI i offentlig sektor.">
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    
+    <!-- External Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages/timeline.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="public/images/logo.png" alt="Eneo.ai">
+                    </a>
+                </div>
 
+                <!-- Desktop Navigation -->
+                <nav class="nav">
+                    <a href="om-eneo.html">Om Eneo</a>
+                    <a href="ai-utveckling.html" class="active">AI-utveckling</a>
+                    <a href="samarbetsforum.html">Samarbetsforum</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="mobile-menu">
+                    <button class="mobile-menu-button" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" id="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav" id="mobile-nav">
+                <div class="container">
+                    <nav>
+                        <a href="index.html" onclick="closeMobileMenu()">Hem</a>
+                        <a href="om-eneo.html" onclick="closeMobileMenu()">Om Eneo</a>
+                        <a href="ai-utveckling.html" onclick="closeMobileMenu()" class="active">AI-utveckling</a>
+                        <a href="samarbetsforum.html" onclick="closeMobileMenu()">Samarbetsforum</a>
+                        <a href="kontakt.html" onclick="closeMobileMenu()">Kontakt</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <h1>AI-produktutveckling</h1>
+                    <p>Tidslinje för Eneo.ai:s utvecklingsresa</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="section">
+            <div class="container">
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <h2>Från vision till verklighet</h2>
+                        <p>Eneo.ai:s utveckling har präglats av en tydlig vision om demokratisk och öppen AI för offentlig sektor. Vår resa har varit driven av principerna om transparens, jämlikhet och kollektivt ansvar.</p>
+                        
+                        <p>Utvecklingen av våra AI-produkter har skett i nära samarbete med offentliga organisationer för att säkerställa att lösningarna verkligen möter verkliga behov. Varje milstolpe har varit noggrant planerad för att bygga en robust och skalbar plattform som kan tjäna hela det offentliga Sverige.</p>
+                        
+                        <p>Tidslinjen nedan visar de fyra viktigaste milstolparna i vår produktutveckling, från den första prototypen till den fullständiga plattform vi har idag.</p>
+                    </div>
+                    
+                    <div class="intro-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">18</div>
+                            <div class="stat-label">Månader utveckling</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Stora milstolpar</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Öppen källkod</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="section section-secondary">
+            <div class="container">
+                <div class="section-center">
+                    <h2>Utvecklingsresa</h2>
+                    <p>Fyra avgörande milstolpar som format Eneo.ai</p>
+                </div>
+                
+                <div class="timeline-container">
+                    <div class="timeline-track"></div>
+                    
+                    <div class="timeline-item" data-phase="1">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Q2 2023</div>
+                            <h3>Första prototyp</h3>
+                            <p>Utveckling av den första AI-assistenten specifikt anpassad för offentlig sektors behov. Fokus på säkerhet, integritet och användarvänlighet.</p>
+                            <div class="timeline-features">
+                                <span class="feature-tag">Grundläggande chattfunktion</span>
+                                <span class="feature-tag">Säkerhetsramverk</span>
+                                <span class="feature-tag">GDPR-kompatibilitet</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-phase="2">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Q4 2023</div>
+                            <h3>Plattformsarkitektur</h3>
+                            <p>Byggnation av den skalbar plattform som kan hantera flera AI-modeller och tjänster samtidigt. Implementation av användarhantering och arbetsytor.</p>
+                            <div class="timeline-features">
+                                <span class="feature-tag">Modulär arkitektur</span>
+                                <span class="feature-tag">Användarhantering</span>
+                                <span class="feature-tag">API-första design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-phase="3">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Q2 2024</div>
+                            <h3>Samarbetsfunktioner</h3>
+                            <p>Lansering av avancerade samarbetsverktyg som möjliggör kunskapsdelning mellan organisationer och gemensam utveckling av AI-lösningar.</p>
+                            <div class="timeline-features">
+                                <span class="feature-tag">Delning av assistenter</span>
+                                <span class="feature-tag">Kollaborativa arbetsytor</span>
+                                <span class="feature-tag">Kunskapsbibliotek</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-phase="4">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">
+                                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Q4 2024</div>
+                            <h3>Fullständig plattform</h3>
+                            <p>Release av den kompletta Eneo.ai-plattformen med avancerad AI-funktionalitet, omfattande integrationer och robust skalbarhet för hela Sverige.</p>
+                            <div class="timeline-features">
+                                <span class="feature-tag">Avancerade AI-modeller</span>
+                                <span class="feature-tag">Systemintegrationer</span>
+                                <span class="feature-tag">Nationell skalning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusions Section -->
+        <section class="section">
+            <div class="container">
+                <div class="conclusion-content">
+                    <div class="conclusion-text">
+                        <h2>Lärdomar och framtid</h2>
+                        <p>Vår utvecklingsresa har lärt oss att framgångsrik AI-utveckling för offentlig sektor kräver en unik balans mellan teknisk innovation och demokratiska värderingar. Varje fas i tidslinjen har byggt vidare på den föregående, vilket skapat en robust grund för framtida expansion.</p>
+                        
+                        <div class="key-learnings">
+                            <h3>Viktiga insikter från utvecklingsprocessen</h3>
+                            <div class="learning-grid">
+                                <div class="learning-item">
+                                    <div class="learning-icon">🔒</div>
+                                    <h4>Säkerhet först</h4>
+                                    <p>Att bygga in säkerhet och integritet från dag ett har varit avgörande för förtroendet från offentliga organisationer.</p>
+                                </div>
+                                <div class="learning-item">
+                                    <div class="learning-icon">🤝</div>
+                                    <h4>Användardriven utveckling</h4>
+                                    <p>Nära samarbete med slutanvändare har säkerställt att produkten verkligen löser verkliga problem.</p>
+                                </div>
+                                <div class="learning-item">
+                                    <div class="learning-icon">🌱</div>
+                                    <h4>Iterativ tillväxt</h4>
+                                    <p>Stegvis utveckling har möjliggjort kontinuerlig förbättring baserat på feedback och erfarenheter.</p>
+                                </div>
+                                <div class="learning-item">
+                                    <div class="learning-icon">🎯</div>
+                                    <h4>Fokus på öppenhet</h4>
+                                    <p>Öppen källkod-principen har skapat transparens och förtroende som varit avgörande för adoption.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="future-outlook">
+                            <h3>Vad kommer härnäst?</h3>
+                            <p>Med en solid grund på plats blickar vi nu framåt mot nästa fas av utveckling. Vårt fokus kommer att ligga på att fördjupa AI-funktionaliteten, utöka integrationsmöjligheterna och stödja ännu fler användningsområden inom offentlig sektor.</p>
+                            
+                            <p>Vi fortsätter att arbeta enligt våra grundprinciper om öppenhet, demokrati och jämlikhet, medan vi samtidigt driver innovation som kan förbättra offentliga tjänster för alla svenska medborgare.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="next-steps">
+                        <h3>Engagera dig i utvecklingen</h3>
+                        <p>Vill du vara en del av nästa kapitel i Eneo.ai:s utveckling? Det finns många sätt att bidra och påverka framtiden.</p>
+                        
+                        <div class="cta-buttons">
+                            <a href="samarbetsforum.html" class="btn btn-primary">Gå med i samarbetsforumet</a>
+                            <a href="#github" class="btn btn-outline">Bidra på GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Om Eneo</h3>
+                    <ul>
+                        <li><a href="om-eneo.html#vision">Vår vision</a></li>
+                        <li><a href="om-eneo.html#initiativtagare">Initiativtagare</a></li>
+                        <li><a href="om-eneo.html#oppen-kallkod">Öppen källkod</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Utveckling</h3>
+                    <ul>
+                        <li><a href="ai-utveckling.html">AI-utveckling</a></li>
+                        <li><a href="#github">GitHub</a></li>
+                        <li><a href="#dokumentation">Dokumentation</a></li>
+                        <li><a href="#api">API-referens</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Samarbete</h3>
+                    <ul>
+                        <li><a href="samarbetsforum.html">Samarbetsforum</a></li>
+                        <li><a href="#bidra">Bidra</a></li>
+                        <li><a href="#community">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li><a href="mailto:digitalisering@sundsvall.se">digitalisering@sundsvall.se</a></li>
+                        <li><a href="kontakt.html">Sundsvalls kommun</a></li>
+                        <li><a href="kontakt.html">851 85 Sundsvall</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Ett initiativ från Sundsvalls kommun och Ånge kommun för hela offentliga Sverige</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/timeline.js"></script>
+</body>
+</html>
