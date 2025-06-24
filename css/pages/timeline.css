@@ -22,10 +22,14 @@
 
 /* Introduction Section */
 .intro-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
+    display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.intro-text {
+    max-width: 800px;
+    text-align: center;
 }
 
 .intro-text h2 {
@@ -40,46 +44,24 @@
     color: var(--muted-foreground);
     line-height: 1.7;
     margin-bottom: 1.5rem;
+    text-align: left;
 }
 
+/* Remove intro-stats completely */
 .intro-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-    background: linear-gradient(145deg, var(--background), var(--accent));
-    border: 1px solid var(--border);
-    border-radius: 1rem;
-    box-shadow: var(--shadow-md);
+    display: none;
 }
 
 .stat-item {
-    text-align: center;
-    padding: 1rem;
-    border-radius: 0.75rem;
-    background: rgba(255, 255, 255, 0.7);
-    transition: all var(--transition-smooth);
-}
-
-.stat-item:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-sm);
+    display: none;
 }
 
 .stat-number {
-    font-size: 2.5rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--primary);
-    line-height: 1;
-    margin-bottom: 0.5rem;
+    display: none;
 }
 
 .stat-label {
-    font-size: 0.875rem;
-    font-weight: var(--font-weight-medium);
-    color: var(--muted-foreground);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    display: none;
 }
 
 /* Timeline Container */
@@ -102,7 +84,7 @@
     border-radius: 1px;
     box-shadow: 0 0 8px rgba(0, 82, 147, 0.08);
     opacity: 0.8;
-    z-index: 0;
+    z-index: 1;
 }
 
 .timeline-track::before {
@@ -117,7 +99,7 @@
     border-radius: 50%;
     transform: translateX(-50%);
     box-shadow: 0 0 0 4px var(--primary), 0 4px 12px rgba(0, 82, 147, 0.3);
-    z-index: 2;
+    z-index: 3;
 }
 
 .timeline-track::after {
@@ -133,7 +115,7 @@
     transform: translateX(-50%);
     box-shadow: 0 0 0 4px var(--primary), 0 4px 12px rgba(0, 82, 147, 0.3);
     animation: pulse-end 2s infinite;
-    z-index: 2;
+    z-index: 3;
 }
 
 @keyframes pulse-end {
@@ -213,7 +195,7 @@
     box-shadow: 0 12px 32px rgba(0, 82, 147, 0.3);
 }
 
-/* Timeline Content */
+/* Timeline Content - Remove arrows */
 .timeline-content {
     flex: 1;
     max-width: calc(50% - 3rem);
@@ -226,27 +208,9 @@
     position: relative;
 }
 
+/* Remove the arrow pseudo-elements */
 .timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 0;
-    height: 0;
-    border: 12px solid transparent;
-    transform: translateY(-50%);
-}
-
-/* Arrow pointing to marker */
-.timeline-item:nth-child(even) .timeline-content::before {
-    right: -24px;
-    border-left-color: var(--background);
-    border-right-color: transparent;
-}
-
-.timeline-item:nth-child(odd) .timeline-content::before {
-    left: -24px;
-    border-right-color: var(--background);
-    border-left-color: transparent;
+    display: none;
 }
 
 .timeline-content:hover {
@@ -455,13 +419,7 @@
 
 @media (max-width: 1023px) {
     .intro-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    .intro-stats {
-        flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
     }
     
     .conclusion-content {
@@ -485,7 +443,7 @@
         transform: none;
         width: 1px;
         opacity: 0.3;
-        z-index: 0;
+        z-index: 1;
     }
     
     .timeline-track::before,
@@ -510,13 +468,6 @@
         padding: 1.5rem 2rem !important;
     }
     
-    .timeline-content::before {
-        left: -12px !important;
-        right: auto !important;
-        border-right-color: var(--background) !important;
-        border-left-color: transparent !important;
-    }
-    
     .timeline-icon {
         width: 50px;
         height: 50px;
@@ -525,11 +476,6 @@
     .timeline-icon svg {
         width: 20px;
         height: 20px;
-    }
-    
-    .intro-stats {
-        flex-direction: column;
-        gap: 1.5rem;
     }
     
     .learning-grid {
@@ -565,10 +511,6 @@
     .feature-tag {
         font-size: 0.6875rem;
         padding: 0.25rem 0.5rem;
-    }
-    
-    .stat-number {
-        font-size: 2rem;
     }
     
     .learning-item {
