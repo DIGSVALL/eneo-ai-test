@@ -101,6 +101,7 @@
     transform: translateX(-50%);
     border-radius: 2px;
     box-shadow: 0 0 20px rgba(0, 82, 147, 0.2);
+    z-index: 1;
 }
 
 .timeline-track::before {
@@ -115,6 +116,7 @@
     border-radius: 50%;
     transform: translateX(-50%);
     box-shadow: 0 0 0 4px var(--primary), 0 4px 12px rgba(0, 82, 147, 0.3);
+    z-index: 2;
 }
 
 .timeline-track::after {
@@ -124,20 +126,21 @@
     left: 50%;
     width: 20px;
     height: 20px;
-    background: var(--success);
+    background: var(--primary);
     border: 4px solid var(--background);
     border-radius: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 0 0 4px var(--success), 0 4px 12px rgba(34, 197, 94, 0.3);
-    animation: pulse-success 2s infinite;
+    box-shadow: 0 0 0 4px var(--primary), 0 4px 12px rgba(0, 82, 147, 0.3);
+    animation: pulse-end 2s infinite;
+    z-index: 2;
 }
 
-@keyframes pulse-success {
+@keyframes pulse-end {
     0%, 100% { 
-        box-shadow: 0 0 0 4px var(--success), 0 4px 12px rgba(34, 197, 94, 0.3);
+        box-shadow: 0 0 0 4px var(--primary), 0 4px 12px rgba(0, 82, 147, 0.3);
     }
     50% { 
-        box-shadow: 0 0 0 8px var(--success), 0 4px 20px rgba(34, 197, 94, 0.5);
+        box-shadow: 0 0 0 8px var(--primary), 0 4px 20px rgba(0, 82, 147, 0.5);
     }
 }
 
@@ -199,6 +202,8 @@
     color: var(--primary);
     box-shadow: 0 8px 24px rgba(0, 82, 147, 0.2);
     transition: all var(--transition-smooth);
+    z-index: 10;
+    position: relative;
 }
 
 .timeline-item:hover .timeline-icon {
@@ -231,13 +236,15 @@
 
 /* Arrow pointing to marker */
 .timeline-item:nth-child(odd) .timeline-content::before {
-    right: -24px;
-    border-left-color: var(--background);
+    left: -24px;
+    border-right-color: var(--background);
+    border-left-color: transparent;
 }
 
 .timeline-item:nth-child(even) .timeline-content::before {
-    left: -24px;
-    border-right-color: var(--background);
+    right: -24px;
+    border-left-color: var(--background);
+    border-right-color: transparent;
 }
 
 .timeline-content:hover {
@@ -497,10 +504,10 @@
     }
     
     .timeline-content::before {
-        left: -12px !important;
-        right: auto !important;
-        border-right-color: var(--background) !important;
-        border-left-color: transparent !important;
+        right: -12px !important;
+        left: auto !important;
+        border-left-color: var(--background) !important;
+        border-right-color: transparent !important;
     }
     
     .timeline-icon {
