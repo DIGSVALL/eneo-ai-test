@@ -115,14 +115,14 @@
 .platform-showcase {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 0rem;
     align-items: center;
 }
 
 .platform-text {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0rem;
 }
 
 .platform-text h2 {
