@@ -100,6 +100,11 @@
     margin: 0 auto 4rem;
 }
 
+/* Override paragraph width for CTA sections to match h2 width */
+.cta-section .section-center p {
+    max-width: none;
+}
+
 /* Trust indicators */
 .trust-indicators {
     display: grid;
