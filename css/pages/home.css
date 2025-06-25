@@ -115,7 +115,7 @@
 .platform-showcase {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0rem;
+    gap: 2rem;
     align-items: center;
 }
 
