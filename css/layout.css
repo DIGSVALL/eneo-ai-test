@@ -231,7 +231,6 @@
     text-decoration: none;
     font-size: 0.875rem;
     transition: color var(--transition-smooth);
-    justify-content: center;
 }
 
 .footer-section a:hover {
