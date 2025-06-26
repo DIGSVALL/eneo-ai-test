@@ -205,7 +205,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-bottom: 3rem;
-    align-items: start;
+    align-items: center;
 }
 
 .footer-logo {
