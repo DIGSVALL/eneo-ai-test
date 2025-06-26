@@ -249,6 +249,179 @@
     border: 1px solid rgba(0, 82, 147, 0.2);
 }
 
+/* Challenges and Advantages Section Styles */
+.challenges-section, .advantages-section {
+    margin: 4rem 0;
+}
+
+.challenges-section h3, .advantages-section h3 {
+    font-size: 1.75rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--foreground);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.challenges-section p, .advantages-section p {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.challenge-card {
+    background: linear-gradient(145deg, #fef2f2, #fee2e2);
+    border: 1px solid #fca5a5;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all var(--transition-smooth);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.challenge-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-smooth);
+}
+
+.challenge-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(220, 38, 38, 0.15);
+    border-color: #dc2626;
+}
+
+.challenge-card:hover::before {
+    transform: scaleX(1);
+}
+
+.advantage-card {
+    background: linear-gradient(145deg, #f0fdf4, #dcfce7);
+    border: 1px solid #86efac;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all var(--transition-smooth);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.advantage-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--success), #10b981);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-smooth);
+}
+
+.advantage-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(34, 197, 94, 0.15);
+    border-color: var(--success);
+}
+
+.advantage-card:hover::before {
+    transform: scaleX(1);
+}
+
+.challenge-icon, .advantage-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all var(--transition-smooth);
+}
+
+.challenge-icon.warning {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(239, 68, 68, 0.1));
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    color: #dc2626;
+}
+
+.advantage-icon.success {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.1));
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: var(--success);
+}
+
+.challenge-card:hover .challenge-icon {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.15), rgba(239, 68, 68, 0.15));
+    border-color: rgba(220, 38, 38, 0.4);
+    transform: scale(1.05);
+}
+
+.advantage-card:hover .advantage-icon {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(16, 185, 129, 0.15));
+    border-color: rgba(34, 197, 94, 0.4);
+    transform: scale(1.05);
+}
+
+.challenge-card h4, .advantage-card h4 {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 1rem;
+    transition: color var(--transition-smooth);
+}
+
+.challenge-card h4 {
+    color: #dc2626;
+}
+
+.advantage-card h4 {
+    color: var(--success);
+}
+
+.challenge-card:hover h4 {
+    color: #b91c1c;
+}
+
+.advantage-card:hover h4 {
+    color: #16a34a;
+}
+
+.challenge-card p, .advantage-card p {
+    color: var(--muted-foreground);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+    text-align: left;
+}
+
 /* Conclusions Section */
 .conclusion-content {
     display: flex;
@@ -400,8 +573,32 @@
 }
 
 /* Responsive Design */
+@media (min-width: 768px) {
+    .challenge-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .advantage-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+}
+
 @media (min-width: 1024px) {
-    /* Removed hover effects */
+    .challenge-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+    
+    .advantage-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+    
+    .challenge-card, .advantage-card {
+        padding: 2.5rem;
+    }
 }
 
 @media (max-width: 1023px) {
@@ -430,7 +627,6 @@
         transform: none;
         width: 1px;
         opacity: 0.3;
-        z-index: 1;
     }
     
     .timeline-track::before,
@@ -473,6 +669,33 @@
     .timeline-features {
         justify-content: flex-start;
     }
+    
+    /* Challenges and Advantages Mobile */
+    .challenges-section, .advantages-section {
+        margin: 3rem 0;
+    }
+    
+    .challenge-grid, .advantage-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .challenge-card, .advantage-card {
+        padding: 1.5rem;
+    }
+    
+    .challenge-icon, .advantage-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .challenges-section h3, .advantages-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .challenge-card h4, .advantage-card h4 {
+        font-size: 1.125rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -507,13 +730,37 @@
     .next-steps {
         padding: 1.5rem;
     }
+    
+    /* Challenges and Advantages Small Mobile */
+    .challenge-card, .advantage-card {
+        padding: 1.25rem;
+    }
+    
+    .challenge-card p, .advantage-card p {
+        font-size: 0.875rem;
+    }
 }
 
-/* Animation for scroll-triggered elements */
+/* Animation for entrance effects */
 @media (prefers-reduced-motion: no-preference) {
     .timeline-item.animate-in {
         animation: fadeInScale 0.6s ease forwards;
     }
+    
+    .challenge-card, .advantage-card {
+        animation: fadeInUp 0.6s ease forwards;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    
+    .challenge-card:nth-child(1) { animation-delay: 0.1s; }
+    .challenge-card:nth-child(2) { animation-delay: 0.2s; }
+    .challenge-card:nth-child(3) { animation-delay: 0.3s; }
+    .challenge-card:nth-child(4) { animation-delay: 0.4s; }
+    
+    .advantage-card:nth-child(1) { animation-delay: 0.1s; }
+    .advantage-card:nth-child(2) { animation-delay: 0.2s; }
+    .advantage-card:nth-child(3) { animation-delay: 0.3s; }
     
     @keyframes fadeInScale {
         from {
@@ -525,6 +772,19 @@
             transform: translateY(0) scale(1);
         }
     }
+    
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Focus states for accessibility */
+.challenge-card:focus-within, .advantage-card:focus-within {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
 }
 
 /* Print styles */
@@ -539,5 +799,19 @@
         transform: none;
         break-inside: avoid;
         margin-bottom: 2rem;
+    }
+    
+    .challenge-card, .advantage-card {
+        break-inside: avoid;
+        box-shadow: none;
+        margin-bottom: 1rem;
+    }
+    
+    .challenge-card {
+        border: 1px solid #dc2626;
+    }
+    
+    .advantage-card {
+        border: 1px solid var(--success);
     }
 }
