@@ -211,13 +211,23 @@
 .footer-logo {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .footer-logo img {
     height: 2.5rem;
     width: auto;
     object-fit: contain;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-contact-block {
+    text-align: left;
 }
 
 .footer-section h3 {
