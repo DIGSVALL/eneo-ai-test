@@ -19,8 +19,12 @@
     color: var(--muted-foreground);
     font-weight: var(--font-weight-light);
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto; /* Added bottom margin for spacing between paragraphs */
     line-height: 1.6;
+}
+
+.page-hero-content p:last-child {
+    margin-bottom: 0; /* Remove bottom margin from last paragraph */
 }
 
 /* User Association Section */
@@ -36,6 +40,11 @@
 
 .association-text {
     text-align: left;
+}
+
+.association-text h2 {
+    text-align: center; /* Center the h2 header */
+    margin-bottom: 2rem; /* Add some spacing below the centered header */
 }
 
 .association-text p {
