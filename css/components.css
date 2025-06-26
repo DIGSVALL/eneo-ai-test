@@ -86,6 +86,8 @@
 
 .section-center {
     text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .section h2 {
@@ -96,8 +98,9 @@
 
 .section p {
     font-size: 1.25rem;
-    max-width: 32rem;
+    max-width: none;
     margin: 0 auto 4rem;
+    line-height: 1.7;
 }
 
 /* Override paragraph width for CTA sections to match h2 width */
