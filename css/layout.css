@@ -211,7 +211,7 @@
 .footer-logo {
     display: flex;
     align-items: flex-start;
-    justify-content: flex-end
+    justify-content: center;
 }
 
 .footer-logo img {
@@ -224,6 +224,7 @@
     font-weight: var(--font-weight-medium);
     margin-bottom: 1rem;
     color: var(--foreground);
+    justify-content: center;
 }
 
 .footer-section a {
