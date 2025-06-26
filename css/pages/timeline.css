@@ -143,6 +143,8 @@
 .timeline-item[data-phase="2"] { animation-delay: 0.4s; }
 .timeline-item[data-phase="3"] { animation-delay: 0.6s; }
 .timeline-item[data-phase="4"] { animation-delay: 0.8s; }
+.timeline-item[data-phase="5"] { animation-delay: 1.0s; }
+.timeline-item[data-phase="6"] { animation-delay: 1.2s; }
 
 @keyframes slideInUp {
     to {
