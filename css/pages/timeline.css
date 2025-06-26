@@ -100,21 +100,6 @@
     border-radius: 50%;
     transform: translateX(-50%);
     box-shadow: 0 0 0 4px var(--primary), 0 4px 12px rgba(0, 82, 147, 0.3);
-    z-index: 3;
-}
-
-.timeline-track::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    background: var(--primary);
-    border: 4px solid var(--background);
-    border-radius: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 0 0 4px var(--primary), 0 4px 12px rgba(0, 82, 147, 0.3);
     animation: pulse-end 2s infinite;
     z-index: 3;
 }
@@ -230,6 +215,36 @@
     font-size: 1.125rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
+}
+
+/* Timeline Link Button */
+.timeline-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    font-size: 0.875rem;
+    transition: all var(--transition-smooth);
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 82, 147, 0.2);
+    border-radius: 0.5rem;
+    background: rgba(0, 82, 147, 0.05);
+}
+
+.timeline-link:hover {
+    background: rgba(0, 82, 147, 0.1);
+    border-color: rgba(0, 82, 147, 0.3);
+    transform: translateY(-1px);
+}
+
+.timeline-link svg {
+    transition: transform var(--transition-smooth);
+}
+
+.timeline-link:hover svg {
+    transform: scale(1.1);
 }
 
 /* Feature Tags */
@@ -809,6 +824,11 @@
     outline-offset: 2px;
 }
 
+.timeline-link:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
 /* Print styles */
 @media print {
     .timeline-track::after {
@@ -836,4 +856,24 @@
     .advantage-card {
         border: 1px solid var(--success);
     }
+    
+    .timeline-link {
+        color: #000;
+        text-decoration: underline;
+    }
 }
+    background: var(--primary);
+    border: 4px solid var(--background);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 4px var(--primary), 0 4px 12px rgba(0, 82, 147, 0.3);
+    z-index: 3;
+}
+
+.timeline-track::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
