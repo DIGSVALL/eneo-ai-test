@@ -45,10 +45,9 @@
             margin-bottom: 2rem;
         }
         
-        /* Fix manifest quote section background */
+        /* Fix manifest quote section background - ensure full-width background */
         .section-secondary {
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
+            background: var(--secondary);
         }
         
         /* Make quote text bold */
@@ -161,15 +160,17 @@
         </section>
 
         <!-- Manifest Quote Section -->
-        <section class="section section-secondary section-center">
+        <section class="section section-secondary">
             <div class="container">
-                <div class="manifest-quote">
-                    <blockquote>
-                        "Generativ AI får inte vara en teknologi för några få, den ska vara ett stöd till oss alla."
-                    </blockquote>
-                    <cite>
-                        — Sundsvalls kommun, initiativtagare till Eneo.ai
-                    </cite>
+                <div class="section-center">
+                    <div class="manifest-quote">
+                        <blockquote>
+                            "Generativ AI får inte vara en teknologi för några få, den ska vara ett stöd till oss alla."
+                        </blockquote>
+                        <cite>
+                            — Sundsvalls kommun, initiativtagare till Eneo.ai
+                        </cite>
+                    </div>
                 </div>
             </div>
         </section>
